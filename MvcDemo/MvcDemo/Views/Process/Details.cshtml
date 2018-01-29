@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Details</h1>
+
+@{ 
+    var myProcess = @ViewData["Process"];
+
+    <h2>@this.Model.ProcessName</h2>
+    <h3>Id:@this.Model.Id</h3>
+}

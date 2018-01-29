@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<ul>
+    @{ foreach (var process in this.Model)
+        {
+
+
+            <!-- <li>@process.ProcessName</li> -->
+            var myProcess = @process.ProcessName.ToString();
+            if (myProcess == null)
+                myProcess = "not defined name";
+
+            <!-- <li>@myProcess</li> -->
+            <li>
+                @Html.ActionLink((string)myProcess, "Details", new { id = process.Id })
+            </li>
+        }
+
+    }
+
+</ul>
+
